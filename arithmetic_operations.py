@@ -92,3 +92,20 @@ def kuntosali():
 		print("Virheellinen syöte! Syötä numerot uudelleen")
 		
 kuntosali()
+
+
+
+#5
+# This task practices input validation and error handling using try-except.
+# The user is asked to input an integer. If the input is not a valid integer, 
+# the program prints an error message and shows the invalid input in quotes.
+
+def tarkasta_kokonaisluku():
+	syote = input("Anna kokonaisluku: ")
+	try:
+		numero = int(syote)
+		print("OK")
+	except ValueError:
+		print(f"'{syote}' ei ole kokonaisluku")
+
+tarkasta_kokonaisluku()

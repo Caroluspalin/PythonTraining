@@ -15,3 +15,26 @@ def gender_distribution():
     print(f"Males: {males_percentage:.1f}%")
     
 gender_distribution()
+
+
+#2 - Sales Commission Calculation
+# This exercise practices the use of arithmetic operations, conditional statements (if-else),
+# and error handling (try-except). The program calculates a car salesperson's commission 
+
+def myyntipalkkio():
+    try:
+        myyntihinta = float(input("Anna auton myyntihinta: "))
+
+        if myyntihinta < 50000:
+            bonus = myyntihinta * 0.01
+        else:
+            bonus = myyntihinta * 0.015
+
+        bonus = max(bonus, 200)
+
+        print(f"Myyntipalkkio on {bonus:.2f}€.")
+
+    except ValueError:
+        print("Virheellinen syöte: Anna myyntihinta numerona!")
+
+myyntipalkkio()

@@ -64,3 +64,31 @@ def omenat():
 		print("Virheellinen syöte: Anna kokonaisluvut.")
 		
 omenat()
+
+
+#4
+# This task practices conditional logic and basic arithmetic operations.
+# The user enters how many times they go to the gym per year, the price of a day ticket, and the annual pass.
+# The program calculates which option is cheaper and by how much.
+
+def kuntosali():
+	try:
+		paivat = int(input("Anna käyntikertojen vuosimäärä: "))
+		paivalippu = float(input("Anna päivälipun hinta: "))
+		vuosilippu = float(input("Anna vuosilipun hinta: "))
+		
+		hinta = paivat * paivalippu
+		
+		if hinta < vuosilippu:
+			ero = vuosilippu - hinta
+			print(f"Päivälippu tulee {ero:.2f} euroa halvemmaksi")
+		elif vuosilippu < hinta:
+			ero = hinta - vuosilippu
+			print(f"Vuosilippu tulee {ero:.2f} euroa halvemmaksi")
+		else:
+			print("Vuosilippu ja päiväliput tulevat samanhintaisiksi")
+		
+	except ValueError:
+		print("Virheellinen syöte! Syötä numerot uudelleen")
+		
+kuntosali()

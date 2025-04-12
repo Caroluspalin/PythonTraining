@@ -109,3 +109,22 @@ def tarkasta_kokonaisluku():
 		print(f"'{syote}' ei ole kokonaisluku")
 
 tarkasta_kokonaisluku()
+
+
+#6
+# This task practices numeric input validation and conditional logic.
+# The user is asked for a weekday number (1–7). If the input is valid, the program prints "OK".
+# Otherwise, it instructs the user to input a number within the correct range.
+
+def viikonpaiva_nro():
+	try:
+		numero = int(input("Anna viikonpäivän numero: "))
+		if 1 <= numero <= 7:
+			print("OK")
+		else:
+			print("Syötä kokonaisluku väliltä 1 ja 7")
+	except ValueError:
+		print("Syötä kokonaisluku väliltä 1 ja 7")
+
+viikonpaiva_nro()
+

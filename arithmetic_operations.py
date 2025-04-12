@@ -38,3 +38,29 @@ def myyntipalkkio():
         print("Virheellinen syöte: Anna myyntihinta numerona!")
 
 myyntipalkkio()
+
+
+#3
+# This exercise practices integer division and modulus operations.
+# The user is asked how many apples and children there are.
+# The program calculates how many apples each child gets and how many are left over.
+
+def omenat():
+	try:
+		omenat = int(input("Omenoiden lukumäärä? "))
+		lapset = int(input("Lasten lukumäärä? "))
+		
+		if lapset <= 0:
+			print("Lasten määrän on oltava suurempi kuin nolla.")
+			return
+		
+		perlapsi = omenat // lapset
+		yliomenat = omenat % lapset
+		
+		print(f"Omenoita per lapsi: {perlapsi}")
+		print(f"Ylijääviä omenoita : {yliomenat}")
+		
+	except ValueError:
+		print("Virheellinen syöte: Anna kokonaisluvut.")
+		
+omenat()

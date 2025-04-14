@@ -6,3 +6,13 @@ def for_silmukka():
         print(i, end=' ')
         
 for_silmukka()
+
+
+# 2  For loop from 10 to 30
+# This function prints numbers from 10 to 30 using a for loop
+
+def tulosta_numerot():
+    for i in range(10, 31):
+        print(i, end=' ')
+
+tulosta_numerot()

@@ -16,3 +16,22 @@ def tulosta_numerot():
         print(i, end=' ')
 
 tulosta_numerot()
+
+
+# 3  Countdown with sum
+# Asks the user for a number and prints numbers from n to 1, then prints the sum
+
+def tulosta_laskevasti():
+    n = int(input("Anna kokonaisluku: "))
+
+    if n <= 0:
+        print("Ei tulostettavaa!")
+    else:
+        summa = 0
+        for i in range(n, 0, -1):
+            print(i, end=" ")
+            summa += i
+        print()  
+        print("Lukujen summa on", summa)
+
+tulosta_laskevasti()

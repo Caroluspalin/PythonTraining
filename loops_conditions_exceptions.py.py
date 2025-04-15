@@ -93,3 +93,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+#6
+# This program calculates the yearly growth of a deposit with compound interest and capital gains tax.
+# The user provides the interest rate, tax rate, initial deposit, and the number of years.
+# The program then prints the balance at the end of each year.
+
+def talletus_korot():
+    korkoprosentti = float(input("Anna korkoprosentti:"))
+    veroprosentti = float(input("Anna pääomatuloveroprosentti:"))
+    paoma = float(input("Anna talletuksen suuruus:"))
+    vuodet = int(input("Anna vuosien lukumäärä:"))
+
+    for vuosi in range(1, vuodet + 1):
+        korko = korkoprosentti / 100 * paoma
+        vero = veroprosentti / 100 * korko
+        paoma = paoma + korko - vero
+        print(f"vuosi {vuosi}: {paoma:.2f}")
+
+
+talletus_korot()

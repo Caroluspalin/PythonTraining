@@ -67,3 +67,29 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+#5
+# This program asks the user for a month number (1–12) and checks its validity.
+# It keeps prompting until a valid month number is given and handles invalid input gracefully.
+
+def tarkasta_kuukausi():
+    while True:
+        syote = input("Anna kuukauden numero: ")
+        try:
+            kuukausi = int(syote)
+            if 1 <= kuukausi <= 12:
+                print("OK")
+                break
+            else:
+                print(f"{kuukausi} ei ole kelvollinen kuukausinumero")
+        except ValueError:
+            print(f"'{syote}' ei ole kelvollinen kuukausinumero")
+
+def main():
+    tarkasta_kuukausi()
+    return 0
+
+if __name__ == "__main__":
+    main()

@@ -115,3 +115,17 @@ def talletus_korot():
 
 
 talletus_korot()
+
+
+
+#7
+# This program uses a while loop to print numbers from 2 to 20 on the same line, separated by spaces.
+
+def while_loop():
+    luku = 2
+    while luku <= 20:
+        print(luku, end=" ")
+        luku += 1
+
+while_loop()
+ 

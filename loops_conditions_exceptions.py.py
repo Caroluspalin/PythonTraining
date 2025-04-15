@@ -35,3 +35,35 @@ def tulosta_laskevasti():
         print("Lukujen summa on", summa)
 
 tulosta_laskevasti()
+
+
+
+#4
+# This program calculates the average of user-input numbers.
+# The user enters numbers one at a time and ends the input with 0.
+# If at least one number is entered, it prints the average.
+
+def laske_keskiarvo():
+    summa = 0
+    määrä = 0
+
+    luku = float(input("Anna ensimmäinen numero: "))
+    while luku != 0:
+        summa += luku
+        määrä += 1
+        luku = float(input("Anna seuraava numero: "))
+
+    if määrä == 0:
+        print("Ei mitään laskettavaa")
+    else:
+        keskiarvo = summa / määrä
+        print(f"Keskiarvo on {keskiarvo:.2f}")
+
+
+def main():
+    laske_keskiarvo()
+    return 0
+
+
+if __name__ == "__main__":
+    main()

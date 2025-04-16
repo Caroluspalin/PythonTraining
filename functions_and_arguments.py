@@ -46,3 +46,27 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+    
+#4 Calculate earnings based on hourly wage and overtime
+
+def compute_earning(Tuntipalkka, Työtunnit):
+    try:
+        if Työtunnit > 40:
+            Ylityötunnit = Työtunnit - 40
+            Tulot = (40 * Tuntipalkka) + (Ylityötunnit * Tuntipalkka * 1.5)
+        else:
+            Tulot = Tuntipalkka * Työtunnit
+        return Tulot
+    except:
+        return 0  # Fallback if something goes wrong
+
+def main():
+    Tuntipalkka = float(input("Anna tuntipalkka: "))
+    Työtunnit = int(input("Anna tehdyt tunnit: "))
+    Tulot = compute_earning(Tuntipalkka, Työtunnit)
+    print(f"Ansiosi ovat {Tulot:.2f} euroa")
+
+if __name__ == "__main__":
+    main()
+

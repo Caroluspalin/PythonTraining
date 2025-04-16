@@ -28,3 +28,21 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    
+#3 Calculate and print a discount amount based on user input
+
+def compute_discount(hinta, alennusprosentti):
+    alennus = hinta * (alennusprosentti / 100)
+    return alennus
+
+def main():
+    hinta = float(input("Anna hinta: "))
+    alennusprosentti = float(input("Anna alennusprosentti: "))
+    alennus = compute_discount(hinta, alennusprosentti)
+    print(f"Alennus on {alennus:.2f} euroa")
+
+if __name__ == "__main__":
+    main()
+

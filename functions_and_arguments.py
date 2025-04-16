@@ -59,7 +59,7 @@ def compute_earning(Tuntipalkka, Työtunnit):
             Tulot = Tuntipalkka * Työtunnit
         return Tulot
     except:
-        return 0  # Fallback if something goes wrong
+        return 0  
 
 def main():
     Tuntipalkka = float(input("Anna tuntipalkka: "))
@@ -70,3 +70,22 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+
+#5 Add two float numbers and round the result using standard rounding (round half up)
+
+from decimal import Decimal, ROUND_HALF_UP
+
+def funktio_add(Luku1, Luku2):
+    summa = Decimal(str(Luku1)) + Decimal(str(Luku2))
+    kokonaisluku = summa.quantize(Decimal('1'), rounding=ROUND_HALF_UP)
+    return int(kokonaisluku) 
+
+def main():
+    Luku1 = float(input("Anna ensimmäinen luku: "))
+    Luku2 = float(input("Anna toinen luku: "))
+    kokonaisluku = funktio_add(Luku1, Luku2)
+    print(kokonaisluku)
+
+if __name__ == "__main__":
+    main()

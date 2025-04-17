@@ -89,3 +89,18 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+#6 This program prints a pyramid shape based on the user-input height.
+def print_pyramid(korkeus):
+    for i in range(korkeus):
+        valit = " " * i
+        tahtia = "*" * (2 * (korkeus - i) - 1)
+        print(valit + tahtia)
+
+def main():
+    korkeus = int(input("Anna pyramidin korkeus: "))
+    print_pyramid(korkeus)
+
+if __name__ == "__main__":
+    main()

@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
 # 7. Date calculator
 # This program asks the user for a date in the format dd.mm.yyyy and a number of days to add.
-# It then calculates and displays the new date after adding the given number of days.
+# It then calculates and displays the new date after adding the given number of days
 
 from datetime import datetime, timedelta
 

@@ -104,3 +104,40 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# 7. Date calculator
+# This program asks the user for a date in the format dd.mm.yyyy and a number of days to add.
+# It then calculates and displays the new date after adding the given number of days.
+
+from datetime import datetime, timedelta
+
+def laske_paivays(paivays_str, lisapaivat):
+    try:
+        paivamaara = datetime.strptime(paivays_str, "%d.%m.%Y")
+    except ValueError:
+        print("Virheellinen päivämäärämuoto. Käytä muotoa pp.kk.vvvv.")
+        return None
+
+    uusi_paivays = paivamaara + timedelta(days=lisapaivat)
+    return uusi_paivays.strftime("%d.%m.%Y")
+
+def main():
+    paivays_input = input("Anna päiväys muodossa pp.kk.vvvv: ")
+    try:
+        lisapaivat = int(input("Anna lisättävien päivien määrä: "))
+    except ValueError:
+        print("Virhe: päivien määrän pitää olla numero.")
+        return 1
+
+    tulos = laske_paivays(paivays_input, lisapaivat)
+    if tulos is None:
+        return 1
+
+    print(f"Uusi päiväys on {tulos}")
+    return 0
+
+if __name__ == "__main__":
+    import sys
+    sys.exit(main())

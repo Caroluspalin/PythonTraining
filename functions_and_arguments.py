@@ -141,3 +141,48 @@ def main():
 if __name__ == "__main__":
     import sys
     sys.exit(main())
+
+
+#8
+# Task: Ask the user for two dates in the format "dd.mm.yyyy" and calculate the number of days between them.
+# If either date is invalid, print "Antamasi arvo ei ole kelvollinen" and do not continue.
+
+from datetime import datetime
+
+def laske_paivat(alkupaiva_str, loppupaiva_str):
+    try:
+        alkupaiva = datetime.strptime(alkupaiva_str, "%d.%m.%Y")
+    except ValueError:
+        print("Antamasi arvo ei ole kelvollinen")
+        return None
+
+    try:
+        loppupaiva = datetime.strptime(loppupaiva_str, "%d.%m.%Y")
+    except ValueError:
+        print("Antamasi arvo ei ole kelvollinen")
+        return None
+
+    return (loppupaiva - alkupaiva).days
+
+def main():
+    print("Anna alkupäivä muodossa pp.kk.vvvv: ")
+    alkupaiva_input = input()
+
+    try:
+        datetime.strptime(alkupaiva_input, "%d.%m.%Y")
+    except ValueError:
+        print("Antamasi arvo ei ole kelvollinen")
+        return 0
+
+    print("Anna loppupäivä muodossa pp.kk.vvvv: ")
+    loppupaiva_input = input()
+
+    paivien_lukumaara = laske_paivat(alkupaiva_input, loppupaiva_input)
+
+    if paivien_lukumaara is not None:
+        print(f"Päivien {alkupaiva_input} ja {loppupaiva_input} välissä on {paivien_lukumaara} päivää.")
+
+    return 0
+
+if __name__ == "__main__":
+    main()

@@ -186,3 +186,38 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+#9
+# Task: Randomly generate one million integers between 1 and 3.
+# Then calculate and print the percentage of times the number 3 was chosen.
+
+import random
+
+def main():
+    arvonnat = 1_000_000
+    kolmoset = 0
+
+    for _ in range(arvonnat):
+        if random.randint(1, 3) == 3:
+            kolmoset += 1
+
+    prosenttiosuus = (kolmoset / arvonnat) * 100
+    prosenttiosuus_pyoristettu = round(prosenttiosuus)  
+
+    print("Satunnaislukugeneraattori arpoi miljoona kertaa luvun väliltä 1-3.")
+    print(f"Luvun 3 prosenttiosuus arvotuista luvuista oli {prosenttiosuus_pyoristettu}%.")
+    
+    
+    vertailuarvo = 100 / 3  # ≈ 33.333...
+    
+    if prosenttiosuus_pyoristettu > vertailuarvo:
+        print("Se oli vähän yli kolmasosan.")
+    elif prosenttiosuus_pyoristettu < vertailuarvo:
+        print("Se oli vähän alle kolmasosan.")
+    else:
+        print("Se oli tasan kolmasosan.")
+
+if __name__ == "__main__":
+    main()

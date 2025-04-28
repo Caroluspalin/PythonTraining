@@ -74,3 +74,17 @@ def main():
     tulosta_tiedot(luvut)
 
 main()
+
+
+
+#6
+# This program asks the user for a letter,
+# and then tells how many times that letter appears in a predefined list.
+
+def kirjainlista():
+    lista = ["A", "A", "B", "A", "C", "B", "C", "F", "B", "B", "A", "A", "C", "C", "C"]
+    kirjain = input("Anna kirjain: ").upper()
+    maara = lista.count(kirjain)
+    print(f"Kirjain {kirjain} löytyi listasta {lista} {maara} kertaa.")
+
+kirjainlista()

@@ -18,3 +18,20 @@ def sanat_jarjestykseen():
         print("x" + sana)
 
 sanat_jarjestykseen()
+
+
+#3
+# This program asks the user for a certain number of integers,
+# stores them in a list, and then prints the list in reversed order.
+
+def kaannetty_lista():
+    luvut = []
+    maara = int(input("Kuinka monta kokonaislukua syötät? "))
+    for i in range(maara):
+        luku = int(input("Anna kokonaisluku: "))
+        luvut.append(luku)
+    luvut.reverse()
+    print()
+    print(' '.join(map(str, luvut)))
+
+kaannetty_lista()

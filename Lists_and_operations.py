@@ -52,3 +52,25 @@ def laskeva_lista():
     print(' '.join(map(str, luvut)))
 
 laskeva_lista()
+
+
+
+#5
+# This program asks the user for five integers,
+# stores them in a list, and prints the count, minimum, maximum, and sum of the list.
+
+def tulosta_tiedot(luvut):
+    print()
+    print(f"count: {len(luvut)}")
+    print(f"min:   {min(luvut)}")
+    print(f"max:   {max(luvut)}")
+    print(f"sum:   {sum(luvut)}")
+
+def main():
+    luvut = []
+    for i in range(5):
+        luku = int(input("Anna kokonaisluku: "))
+        luvut.append(luku)
+    tulosta_tiedot(luvut)
+
+main()

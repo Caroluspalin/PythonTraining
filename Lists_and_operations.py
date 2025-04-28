@@ -35,3 +35,20 @@ def kaannetty_lista():
     print(' '.join(map(str, luvut)))
 
 kaannetty_lista()
+
+
+#4
+# This program asks the user for five integers,
+# stores them in a list, sorts the list in descending order,
+# and then prints the numbers on one line.
+
+def laskeva_lista():
+    luvut = []
+    for i in range(5):
+        luku = int(input("Anna kokonaisluku: "))
+        luvut.append(luku)
+    luvut.sort(reverse=True)
+    print()
+    print(' '.join(map(str, luvut)))
+
+laskeva_lista()

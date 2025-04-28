@@ -107,3 +107,22 @@ def listaa_sukunimet():
     print(', '.join(sukunimet))
 
 listaa_sukunimet()
+
+
+#8
+# This program asks the user for five integers,
+# then calculates and prints the sum of the positive numbers.
+
+def positive_sum(lista):
+    return sum(luku for luku in lista if luku > 0)
+
+def main():
+    luvut = []
+    for i in range(5):
+        luku = int(input("Anna kokonaisluku: "))
+        luvut.append(luku)
+    tulos = positive_sum(luvut)
+    print()
+    print(tulos)
+
+main()

@@ -88,3 +88,22 @@ def kirjainlista():
     print(f"Kirjain {kirjain} löytyi listasta {lista} {maara} kertaa.")
 
 kirjainlista()
+
+
+#7
+# This program asks the user for surnames until they type "ok",
+# then prints all unique surnames in alphabetical order.
+
+def listaa_sukunimet():
+    sukunimet = []
+    while True:
+        nimi = input("Anna sukunimi (ok lopettaa): ")
+        if nimi.lower() == "ok":
+            break
+        if nimi not in sukunimet:
+            sukunimet.append(nimi)
+    sukunimet.sort()
+    print()
+    print(', '.join(sukunimet))
+
+listaa_sukunimet()

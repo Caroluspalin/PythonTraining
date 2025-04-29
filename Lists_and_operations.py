@@ -133,3 +133,17 @@ from urllib.request import urlopen
 sanalista = urlopen("https://www.mit.edu/~ecprice/wordlist.10000").read().splitlines()
 pitkat_sanat = [sana.decode("utf-8") for sana in sanalista if len(sana.decode("utf-8")) == 15]
 print(", ".join(pitkat_sanat))
+
+
+#10
+# Returns the second largest unique number from a list
+
+def toiseksi_suurin(lista):
+    lista = list(set(lista))
+    lista.sort()
+    return lista[-2]
+
+def main():
+    print(toiseksi_suurin([1, 5, 4, 5, 4, 3]))
+
+main()

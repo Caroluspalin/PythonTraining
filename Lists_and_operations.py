@@ -126,3 +126,10 @@ def main():
     print(tulos)
 
 main()
+
+#9 Prints all words that are exactly 15 characters long from the MIT word list on a single line, separated by commas
+from urllib.request import urlopen
+
+sanalista = urlopen("https://www.mit.edu/~ecprice/wordlist.10000").read().splitlines()
+pitkat_sanat = [sana.decode("utf-8") for sana in sanalista if len(sana.decode("utf-8")) == 15]
+print(", ".join(pitkat_sanat))

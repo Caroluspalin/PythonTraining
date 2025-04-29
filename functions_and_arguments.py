@@ -204,7 +204,7 @@ def main():
             kolmoset += 1
 
     prosenttiosuus = (kolmoset / arvonnat) * 100
-    prosenttiosuus_pyoristettu = round(prosenttiosuus)  
+    prosenttiosuus_pyoristettu = round(prosenttiosuus)    
 
     print("Satunnaislukugeneraattori arpoi miljoona kertaa luvun väliltä 1-3.")
     print(f"Luvun 3 prosenttiosuus arvotuista luvuista oli {prosenttiosuus_pyoristettu}%.")

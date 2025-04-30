@@ -147,3 +147,20 @@ def main():
     print(toiseksi_suurin([1, 5, 4, 5, 4, 3]))
 
 main()
+
+#11
+# Print unique and sorted numbers, then the original list sorted
+
+def yksilolliset_lista():
+    luvut = []
+    for i in range(5):
+        luku = int(input("Anna kokonaisluku: "))
+        luvut.append(luku)
+
+    singles = sorted(list(dict.fromkeys(luvut)))
+    kaikki = sorted(luvut)
+
+    print(', '.join(map(str, singles)))
+    print(', '.join(map(str, kaikki)))
+
+yksilolliset_lista()

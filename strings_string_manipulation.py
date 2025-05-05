@@ -33,3 +33,16 @@ def helminauha():
     print("Näkemiin!")
 
 helminauha()
+
+#3 asks for an input from user and counts all the numbers in it and sums them together
+def teksti_summa():
+    teksti = input("Anna teksti: ")
+    summa = 0
+
+    for merkki in teksti:
+        if merkki.isdigit():
+            summa += int(merkki)
+
+    print(f"\nLukujen summa on {summa}")
+
+teksti_summa()

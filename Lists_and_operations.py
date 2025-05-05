@@ -207,3 +207,18 @@ print(lista_1)
 print(lista_2)
 kerro_kolmella(lista_2)
 print(lista_2)
+
+
+#14 Create a new list with elements multiplied by 3, original list remains unchanged
+
+def kerro_kolmella(lista):
+    uusi_lista = []
+    for arvo in lista:
+        uusi_lista.append(arvo * 3)
+    return uusi_lista
+
+# Main program:
+lista = [1, 2, 3, 4, 5, 6]
+uusi_lista = kerro_kolmella(lista)
+print(lista)
+print(uusi_lista)

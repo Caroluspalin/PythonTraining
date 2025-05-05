@@ -188,3 +188,22 @@ sudoku = [
 
 print(rivi_oikein(sudoku, 0))
 print(rivi_oikein(sudoku, 1))
+
+
+
+#13 Multiply each element in a list by 3, modifying the list in place
+
+def kerro_kolmella(lista):
+    for i in range(len(lista)):
+        lista[i] *= 3
+
+lista_1 = [1, 2, 3, 4, 5, 6]
+lista_2 = [10, 20, 30]
+
+print(lista_1)
+kerro_kolmella(lista_1)
+print(lista_1)
+
+print(lista_2)
+kerro_kolmella(lista_2)
+print(lista_2)

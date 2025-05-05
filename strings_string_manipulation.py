@@ -46,3 +46,18 @@ def teksti_summa():
     print(f"\nLukujen summa on {summa}")
 
 teksti_summa()
+
+#4  Asks for a number of surnames, capitalizes them properly, removes duplicates, sorts them alphabetically, and prints them on one line.
+
+def sukunimet():
+    count = int(input("Anna nimien lukumäärä: "))
+    surnames = set()
+
+    for _ in range(count):
+        name = input("Anna sukunimi: ").capitalize()
+        surnames.add(name)
+
+    sorted_surnames = sorted(surnames)
+    print("\n" + " ".join(sorted_surnames))
+
+sukunimet()

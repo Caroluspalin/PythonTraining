@@ -61,3 +61,17 @@ def sukunimet():
     print("\n" + " ".join(sorted_surnames))
 
 sukunimet()
+
+#5 Checks if all characters of string 2 are in string 1
+def osajoukko():
+    str1 = input("Anna 1. teksti: ")
+    str2 = input("Anna 2. teksti: ")
+
+    if str2 == "":
+        print("Ei tutkittavaa!")
+    elif all(char in str1 for char in str2):
+        print("Osajoukko")
+    else:
+        print("Ei ole osajoukko")
+
+osajoukko()

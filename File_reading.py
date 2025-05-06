@@ -54,3 +54,45 @@ def main():
         nayta_tiedot(tiedot)
 
 main()
+
+
+
+#3 A program that reads city bike data and finds the departure stations with the fewest rides.
+
+def lue_tiedot(tnimi: str) -> list:
+    try:
+        with open(tnimi, encoding="utf-8") as tiedosto:
+            rivit = tiedosto.readlines()[1:]  
+            return [rivi.strip() for rivi in rivit if rivi.strip()]
+    except FileNotFoundError:
+        print(f"Tiedostoa ei löytynyt!")
+        return []
+
+def nayta_hiljaisin_lahtoasema(lista: list) -> None:
+    asemat = {}
+
+    for rivi in lista:
+        osat = rivi.split(",")
+        if len(osat) >= 4:
+            asema = osat[3]
+            asemat[asema] = asemat.get(asema, 0) + 1
+
+    if not asemat:
+        print("Ei lähtöasematietoja saatavilla.")
+        return
+
+    min_maara = min(asemat.values())
+
+    hiljaisimmat = [asema for asema, lkm in asemat.items() if lkm == min_maara]
+
+    print("Vähiten lähtöjä oli asemilta:")
+    for asema in sorted(hiljaisimmat):
+        print(f"{asema} ({min_maara} kappaletta)")
+
+def main():
+    tnimi = input("Anna tiedoston nimi: ")
+    tiedot = lue_tiedot(tnimi)
+    if len(tiedot) > 0:
+        nayta_hiljaisin_lahtoasema(tiedot)
+
+main()

@@ -30,3 +30,25 @@ def sanakirja_team_2():
     print()
 
 sanakirja_team_2()
+
+
+# 3. Ask for a team member name and print their role. Loop until "quit".
+
+def sanakirja_team_3():
+    team = {
+        "Jukka": "software developer",
+        "Anne": "project manager",
+        "Susanna": "software developer",
+        "Aliisa": "lead developer"
+    }
+
+    while True:
+        name = input("Anna nimi (quit lopettaa): ")
+        if name == "quit":
+            break
+        if name in team:
+            print(f"{name} : titteli on {team[name]}")
+        else:
+            print(f"{name} : ei kuulu joukkueeseen")
+
+sanakirja_team_3()

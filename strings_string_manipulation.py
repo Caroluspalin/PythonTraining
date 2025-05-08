@@ -121,3 +121,14 @@ if text.lower() == text[::-1].lower():
     print("Kyllä")
 else:
     print("Ei")
+
+
+#11 Check if two strings (ignoring spaces) have exactly the same characters
+
+s1 = input("Anna 1. merkkijono: ").replace(" ", "")
+s2 = input("Anna 2. merkkijono: ").replace(" ", "")
+
+if sorted(s1) == sorted(s2):
+    print("Samat merkit")
+else:
+    print("Eri merkit")

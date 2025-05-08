@@ -111,3 +111,13 @@ else:
 text = input("Anna merkkijono: ")
 for i in range(1, len(text) + 1):
     print(text[:i])
+
+
+
+#10 Check if input is a palindrome (case-insensitive)
+
+text = input("Anna merkkijono: ")
+if text.lower() == text[::-1].lower():
+    print("Kyllä")
+else:
+    print("Ei")

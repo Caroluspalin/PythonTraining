@@ -86,3 +86,12 @@ border = '-' * (len(text) + 4)
 print(border)
 print(f"| {text} |")
 print(border)
+
+
+
+
+#7 Print the last 3 characters and reverse the string
+
+text = input("Anna teksti: ")
+print(text[-3:])    
+print(text[::-1]) 

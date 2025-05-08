@@ -95,3 +95,12 @@ print(border)
 text = input("Anna teksti: ")
 print(text[-3:])    
 print(text[::-1]) 
+
+
+#8 Print the second last character, or "Liian lyhyt!" if too short
+
+text = input("Anna teksti: ")
+if len(text) < 2:
+    print("Liian lyhyt!")
+else:
+    print(text[-2])

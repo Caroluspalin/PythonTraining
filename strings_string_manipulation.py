@@ -75,3 +75,14 @@ def osajoukko():
         print("Ei ole osajoukko")
 
 osajoukko()
+
+
+
+# 6. Text box
+# Ask the user for a string and print it inside a box of dashes and vertical lines
+
+text = input("Anna teksti: ")
+border = '-' * (len(text) + 4)
+print(border)
+print(f"| {text} |")
+print(border)

@@ -104,3 +104,10 @@ if len(text) < 2:
     print("Liian lyhyt!")
 else:
     print(text[-2])
+
+
+#9 Print all substrings starting from the first character
+
+text = input("Anna merkkijono: ")
+for i in range(1, len(text) + 1):
+    print(text[:i])
